@@ -4,6 +4,7 @@
 # See the file COPYING for copying permission.
 
 use POSIX;
+use Getopt::Std;
 
 # Package and version.
 $package = 'openjade';
@@ -19,7 +20,7 @@ undef $opt_l;
 undef $opt_p;
 undef $opt_t;
 do 'getopts.pl';
-&Getopts('l:p:t:');
+&getopts('l:p:t:');
 $module = $opt_l;
 $pot_file = $opt_p;
 
